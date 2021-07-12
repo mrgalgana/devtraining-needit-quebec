@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="18" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="shift 1 (8am - 6pm)" label="Shift" mandatory="true" max_length="40" name="u_choice_2" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Shift 1 (8am - 6pm)" sequence="0" value="shift 1 (8am - 6pm)"/>
+                <element inactive_on_update="false" label="Shift 2 (12pm - 10pm)" sequence="1" value="shift 2 (12pm - 10pm)"/>
+                <element inactive_on_update="false" label="Shift 3 (4pm - 2am)" sequence="2" value="shift 3 (4pm - 2am)"/>
+                <element inactive_on_update="false" label="Shift 4 (8pm - 6am)" sequence="3" value="shift 4 (8pm - 6am)"/>
+                <element inactive_on_update="false" label="Shift 5 (12am -10am)" sequence="4" value="shift 5 (12am -10am)"/>
+                <element inactive_on_update="false" label="Shift 6 (4am - 2pm)" sequence="5" value="shift 6 (4am - 2pm)"/>
+                <element inactive_on_update="false" label="Shift 7 (2pm - 12am)" sequence="6" value="shift 7 (2pm - 12am)"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="automation" label="Assignment group" mandatory="true" max_length="40" name="u_choice_3" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Automation" sequence="0" value="automation"/>
+                <element inactive_on_update="false" label="General insurance" sequence="1" value="general insurance"/>
+                <element inactive_on_update="false" label="Access compliance" sequence="2" value="access compliance"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Assigned to" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Manuel" sequence="0" value="manuel"/>
+                <element inactive_on_update="false" label="Emong" sequence="1" value="emong"/>
+                <element inactive_on_update="false" label="Neri" sequence="2" value="neri"/>
+                <element inactive_on_update="false" label="Jennie" sequence="3" value="jennie"/>
+                <element inactive_on_update="false" label="Randy" sequence="4" value="randy"/>
+                <element inactive_on_update="false" label="Gentry" sequence="5" value="gentry"/>
+            </choice>
+        </element>
         <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Requested for email" mandatory="true" max_length="40" name="u_requested_for_email" type="string"/>
